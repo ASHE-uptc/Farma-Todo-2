@@ -1,5 +1,7 @@
 import javax.swing.SwingUtilities;
 
+//Este es el main del proyecto.
+
 import UI.FarmaTodoGUI;
 import UI.FarmaceuticosMenu;
 import UI.LoginGUI;
