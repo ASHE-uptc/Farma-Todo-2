@@ -1,7 +1,7 @@
 import javax.swing.SwingUtilities;
 
+//Este es el main del proyecto.
 
-//goku le gana
 import UI.FarmaTodoGUI;
 import UI.FarmaceuticosMenu;
 import UI.LoginGUI;
