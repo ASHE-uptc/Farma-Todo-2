@@ -13,6 +13,7 @@ public class Main {
         List<Druggist> druggList=FilesLoader.LoadDruggists("src/Loaders/druggistList.txt");
          SwingUtilities.invokeLater(()->{
              LoginGUI.startLogin();
+             //COMENTARIO POR FELP
         });
         
 }}
