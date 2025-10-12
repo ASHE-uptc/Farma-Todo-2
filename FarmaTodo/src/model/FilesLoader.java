@@ -1,5 +1,4 @@
-package Loaders;
-import model.*;
+package model;
 import java.io.*;
 import java.time.LocalDate;
 import java.util.List;

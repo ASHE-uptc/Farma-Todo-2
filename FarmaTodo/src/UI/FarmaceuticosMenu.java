@@ -16,7 +16,7 @@ import javax.swing.ListModel;
 import javax.swing.border.Border;
 
 import model.Druggist;
-import Loaders.FilesLoader;
+import model.FilesLoader;
 import model.WriteFiles;
 
 /**
@@ -57,7 +57,7 @@ public class FarmaceuticosMenu extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
         
-        listDruggist = FilesLoader.LoadDruggists("src/Loaders/druggistList.txt");
+        listDruggist = FilesLoader.LoadDruggists("druggistList.txt");
         modelListDruggist = new DefaultListModel<>();
         byte contador = 0;
         for (Druggist druggist : listDruggist) {

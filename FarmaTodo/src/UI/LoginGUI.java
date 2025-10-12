@@ -3,7 +3,7 @@ package UI;
 import javax.swing.*;
 import java.util.List;
 import model.Druggist;
-import Loaders.FilesLoader;
+import model.FilesLoader;
 
 /**
  * Clase encargada de gestionar la interfaz de inicio de sesión para los farmacéuticos (Druggists).
@@ -43,7 +43,7 @@ public class LoginGUI {
         while (!logged) {
 
             // Cargar lista de farmacéuticos desde archivo
-            List<Druggist> druggList = FilesLoader.LoadDruggists("src/Loaders/druggistList.txt");
+            List<Druggist> druggList = FilesLoader.LoadDruggists("druggistList.txt");
 
             // Solicitar nombre de usuario
             String log_user = JOptionPane.showInputDialog(null, "Ingrese usuario:", "Login", JOptionPane.QUESTION_MESSAGE);

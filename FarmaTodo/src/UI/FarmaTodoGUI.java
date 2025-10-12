@@ -6,7 +6,7 @@ import javax.swing.*;
 import model.Order;
 import model.Product;
 import java.util.List;
-import Loaders.FilesLoader;
+import model.FilesLoader;
 import java.time.LocalDate;
 
 
@@ -27,7 +27,7 @@ public class FarmaTodoGUI extends JFrame{
         setLocationRelativeTo(null);
 
         //Loading Products
-        catalog=FilesLoader.LoadProducts("src/Loaders/catalog.txt");
+        catalog=FilesLoader.LoadProducts("catalog.txt");
         order=new Order(101, LocalDate.now());
 
         //Catalog Panel
