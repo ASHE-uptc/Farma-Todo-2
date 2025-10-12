@@ -11,6 +11,7 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) throws Exception {
         //Comentario por julian
+        //Comentario por Axel
         List<Druggist> druggList=FilesLoader.LoadDruggists("src/Loaders/druggistList.txt");
          SwingUtilities.invokeLater(()->{
              LoginGUI.startLogin();
