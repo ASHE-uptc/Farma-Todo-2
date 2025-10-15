@@ -7,3 +7,6 @@ Pedro,C,10383453,peter1,peter2
 pepe,C,321321321,pepes,231
 pepe ,t,21312,pepe,ewqw
 nono,c,105344289,pepe,213
+FELP,X,242324,EL PEPE,424341412
+FELP,C,235152525,antonio,5252rrh4g2
+FELP,T,42141414,noSe,olaProfeeeeee
