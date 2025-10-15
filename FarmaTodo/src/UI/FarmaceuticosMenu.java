@@ -106,17 +106,19 @@ public class FarmaceuticosMenu extends JFrame {
             String numDoc;
             do {
                 numDoc = JOptionPane.showInputDialog("Escribe el numero del documento");
+                if (numDoc.equals("")) {
+                    numDoc=null;
+                    JOptionPane.showMessageDialog(null, "El número de documento no puede ser vacio");
+                }
                 for (int i = 0; i < listDruggist.size(); i++) {
                     if (numDoc!=null) {
                        if (numDoc.equals(listDruggist.get(i).getDoc_num())) {
                         numDoc=null;
+                        JOptionPane.showMessageDialog(null, "No puede tener el mismo número de documento que otra persona");
                     } 
                     }
                 }
-                if (numDoc == null) {
-                    return;
-                }
-            } while (numDoc.trim().isEmpty());
+            } while (numDoc==null);
             String druggiestUser;
             do {
                 druggiestUser = JOptionPane.showInputDialog("Escribe el user del farmaceutico");

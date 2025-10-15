@@ -52,8 +52,8 @@ public class FarmaTodoGUI extends JFrame{
                     allCorrect=true;
                 try {
                     stock= Integer.parseInt(JOptionPane.showInputDialog("Ingrese la cantidad que desea"));
-                    if (stock>product.getPro_stock()) {
-                        JOptionPane.showMessageDialog(null, "ERROR: se infreso una cantidad mayor a las unidades disponibles del producto");
+                    if (stock>product.getPro_stock() || stock<=0) {
+                        JOptionPane.showMessageDialog(null, "ERROR: se ingreso una cantidad invalida lo que significa que: \n 1. Se ingreso una cantidad mayor a las unidades disponibles \n 2. Se ingreso 0 o un valor negativo");
                         allCorrect=false;
                     }
                 } catch (NumberFormatException i) {
