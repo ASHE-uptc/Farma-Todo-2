@@ -22,7 +22,10 @@ public class Person {
      * @param doc_type      Tipo de documento 
      * @param doc_num       Numero o indicativo correspondiente al documento
      */
-    public Person(String name, char doc_type, String doc_num){
+    public Person(String name, char doc_type, String doc_num)throws IllegalArgumentException{
+        if(name==null)throw new IllegalArgumentException("el nombre no puede ser vacío");
+        if( doc_type == '\u0000')throw new IllegalArgumentException("el tipo de documento no puede ser vacio");
+        if(doc_num==null)throw new IllegalArgumentException("el número de documento no puede ser vacio");
         this.name=name;
         this.doc_type=doc_type;
         this.doc_num=doc_num;
@@ -56,18 +59,20 @@ public class Person {
     public static Person register(){
         
         Scanner ent=new Scanner(System.in);
-
         System.out.println("What's your name?");
         String name=ent.nextLine();
-
+        char doc_type=' ';
+        try {
         System.out.println("What's your document type?");
-        char doc_type=ent.nextLine().charAt(0);
-
+        doc_type=ent.nextLine().charAt(0);
+        } catch (StringIndexOutOfBoundsException e) {
+            
+        }
         System.out.println("What's your document number?");
         String doc_num=ent.nextLine();
-
+        ent.close();
         return new Person(name, doc_type, doc_num); 
-    
+        
     }
 
     /**Mostrar la información de un cliente

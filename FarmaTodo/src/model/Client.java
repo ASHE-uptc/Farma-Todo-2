@@ -1,4 +1,7 @@
 package model;
+
+import javax.swing.JOptionPane;
+
 /**
  * Representa a un Cliente, trayendo atributos y metodos de la clase {@link Person} para incluir atributos basicos.
  * <p>
@@ -25,6 +28,7 @@ public class Client extends Person {
      * @param druggist_password     La contraseña de usuario para el inicio de sesion.
      * @param pro_amount            Describe la cantidad de unidades de un producto que un cliente solicita
      */
+
     public Client(String name, char doc_type, String doc_num, int pro_amount) {
         super(name, doc_type, doc_num);
     }
@@ -32,6 +36,7 @@ public class Client extends Person {
      * 
      * @return La cantidad de unidades del producto que el cliente solicita.
     */
+
     public int getPro_amount() {
         return pro_amount;
     }
@@ -40,6 +45,11 @@ public class Client extends Person {
      * @param pro_amount La nueva cantidad de unidades del producto que el cliente solicita.
     */
     public void setPro_amount(int pro_amount) {
-        this.pro_amount = pro_amount;
+        try {
+            this.pro_amount = pro_amount;
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Error leyendo el dato");
+        }
+        
     }
 }

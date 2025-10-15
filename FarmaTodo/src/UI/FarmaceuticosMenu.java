@@ -92,8 +92,7 @@ public class FarmaceuticosMenu extends JFrame {
             String docTypeStr;
             char docType;
             do {
-                docTypeStr = JOptionPane
-                        .showInputDialog("Escribe el tipo de documento\n Tarjeta de identidad (T) o Cedula(C)");
+                docTypeStr = JOptionPane.showInputDialog("Escribe el tipo de documento\n Tarjeta de identidad (T) o Cedula(C)");
                 if (docTypeStr == null) {
                     return;
                 }
@@ -107,6 +106,13 @@ public class FarmaceuticosMenu extends JFrame {
             String numDoc;
             do {
                 numDoc = JOptionPane.showInputDialog("Escribe el numero del documento");
+                for (int i = 0; i < listDruggist.size(); i++) {
+                    if (numDoc!=null) {
+                       if (numDoc.equals(listDruggist.get(i).getDoc_num())) {
+                        numDoc=null;
+                    } 
+                    }
+                }
                 if (numDoc == null) {
                     return;
                 }
@@ -129,7 +135,7 @@ public class FarmaceuticosMenu extends JFrame {
                     + name + "    |    Doc:" + numDoc + "    |    username:" + druggiestUser + "    |    password:"
                     + druggiestPassword);
             listDruggist.add(new Druggist(name, docType, numDoc, druggiestUser, druggiestPassword));
-            WriteFiles.SaveFiles("src/druggistList.txt", listDruggist);
+            WriteFiles.SaveFiles("druggistList.txt", listDruggist);
         });
     }
 }
