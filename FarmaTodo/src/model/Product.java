@@ -32,6 +32,7 @@ public class Product {
      * @param pro_expirarion    Fecha de expiración del producto
      */
     public Product(int pro_id, String pro_name, double pro_price, int pro_stock, LocalDate pro_expirarion){
+        //No es necesario meter un try catch dado que el filesloader ya posee uno 
         this.pro_id=pro_id;
         this.pro_name=pro_name;
         this.pro_price=pro_price;

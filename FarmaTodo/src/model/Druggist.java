@@ -25,8 +25,10 @@ public class Druggist extends Person{
      * @param druggist_user         El nombre de usuario para el inicio de sesion.
      * @param druggist_password     La contraseña de usuario para el inicio de sesion.
      */
-    public Druggist(String name, char doc_type, String doc_num, String druggist_user, String druggist_password) {
+    public Druggist(String name, char doc_type, String doc_num, String druggist_user, String druggist_password)throws IllegalArgumentException{
         super(name, doc_type, doc_num);
+        if(name==null) throw new IllegalArgumentException("El nombre no puede ser vacio");
+        if(druggist_password==null) throw new IllegalArgumentException("La contraseña no puede ser vacia");
         this.druggist_user = druggist_user;
         this.druggist_password = druggist_password;
     }
@@ -41,7 +43,8 @@ public class Druggist extends Person{
      * 
      * @param druggist_user El nuevo nombre del usuario que se va a asignar.
     */
-    public void setDruggist_user(String druggist_user) {
+    public void setDruggist_user(String druggist_user) throws IllegalArgumentException{
+        if(druggist_user==null)throw new IllegalArgumentException("El nombre de usuario no puede ser vacio");
         this.druggist_user = druggist_user;
     }
     /**Obtiene la contraseña del farmaceutico.
@@ -56,6 +59,7 @@ public class Druggist extends Person{
      * @param druggist_password  la nueva contraseña del usuario que se va a asignar.
     */
     public void setDruggist_password(String druggist_password) {
+        if(druggist_password==null)throw new IllegalArgumentException("La contraseña no puede ser vacia");
         this.druggist_password = druggist_password;
     }
     /**
