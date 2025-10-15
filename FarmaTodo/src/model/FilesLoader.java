@@ -2,6 +2,9 @@ package model;
 import java.io.*;
 import java.time.LocalDate;
 import java.util.List;
+
+import javax.swing.JOptionPane;
+
 import java.util.ArrayList;
 
 public class FilesLoader{
@@ -25,11 +28,12 @@ public class FilesLoader{
                 }
 
             } catch (FileNotFoundException e) {
-            
                 e.printStackTrace();
             } catch (IOException e) {
         
-                System.out.println("There is a problem loading the file"+ e.getMessage());
+                JOptionPane.showMessageDialog(null,"Error leyendo el archivo "+ e.getMessage());
+            }catch(NumberFormatException e){
+                JOptionPane.showMessageDialog(null, "Algun elemento de la lista es incorrecto"+e.getMessage());
             }
             return products;
         }
@@ -56,8 +60,7 @@ public class FilesLoader{
             
                 e.printStackTrace();
             } catch (IOException e) {
-        
-                System.out.println("There is a problem loading the file"+ e.getMessage());
+                System.out.println("Probablemente "+ e.getMessage());
             }
             return druggists;
         }

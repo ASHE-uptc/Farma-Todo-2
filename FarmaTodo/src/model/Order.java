@@ -73,7 +73,8 @@ public class Order {
      * 
      * @param newProduct
      */
-    public void AddProduct(Product newProduct){
+    public void AddProduct(Product newProduct)throws IllegalArgumentException{
+        if(products==null)throw new IllegalArgumentException("El producto no puede ser nulo");
         products.add(newProduct);
     }
 
