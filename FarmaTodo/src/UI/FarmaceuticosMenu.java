@@ -53,7 +53,7 @@ public class FarmaceuticosMenu extends JFrame {
      */
     public FarmaceuticosMenu() {
         setTitle("Lista de Farmaceuticos------------------------------Cambios");
-        setSize(800, 900);
+        setSize(800, 800);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
         

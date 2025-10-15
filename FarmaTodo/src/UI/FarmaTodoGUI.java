@@ -49,13 +49,14 @@ public class FarmaTodoGUI extends JFrame{
             if (selectProduct!=-1) {
                 Product product=catalog.get(selectProduct);
                 do {
+                    allCorrect=true;
                 try {
                     stock= Integer.parseInt(JOptionPane.showInputDialog("Ingrese la cantidad que desea"));
                     if (stock>product.getPro_stock()) {
                         JOptionPane.showMessageDialog(null, "ERROR: se infreso una cantidad mayor a las unidades disponibles del producto");
                         allCorrect=false;
                     }
-                } catch (ClassCastException i) {
+                } catch (NumberFormatException i) {
                    JOptionPane.showMessageDialog(null, "Se ingreso un valor no numerico");
                    allCorrect=false; 
                 }  
