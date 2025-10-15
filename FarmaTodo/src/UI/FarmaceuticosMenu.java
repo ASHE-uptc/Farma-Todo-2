@@ -129,7 +129,7 @@ public class FarmaceuticosMenu extends JFrame {
                     + name + "    |    Doc:" + numDoc + "    |    username:" + druggiestUser + "    |    password:"
                     + druggiestPassword);
             listDruggist.add(new Druggist(name, docType, numDoc, druggiestUser, druggiestPassword));
-            WriteFiles.SaveFiles("src/druggistList.txt", listDruggist);
+            WriteFiles.SaveFiles("druggistList.txt", listDruggist);
         });
     }
 }
