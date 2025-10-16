@@ -10,3 +10,6 @@ nono,c,105344289,pepe,213
 FELP,X,242324,EL PEPE,424341412
 FELP,C,235152525,antonio,5252rrh4g2
 FELP,T,42141414,noSe,olaProfeeeeee
+juliones,P,1053444289,julioanes,pepe
+FELP,H,1057589641,andresk22,123abc
+pepe,T,902192,pepe,321321

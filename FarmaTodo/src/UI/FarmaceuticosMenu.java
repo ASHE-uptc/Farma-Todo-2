@@ -91,18 +91,26 @@ public class FarmaceuticosMenu extends JFrame {
             } while (name.trim().isEmpty());
             String docTypeStr;
             char docType;
+            boolean verificacionDocumento;
             do {
+                verificacionDocumento=true;
                 docTypeStr = JOptionPane.showInputDialog("Escribe el tipo de documento\n Tarjeta de identidad (T) o Cedula(C)");
                 if (docTypeStr == null) {
+                    verificacionDocumento=false;
                     return;
                 }
                 if (docTypeStr.length() != 1) {
+                    verificacionDocumento=false;
                     JOptionPane.showMessageDialog(this, "Error: Debes introducir solo un caracter", "entrada invalida",
                             JOptionPane.ERROR_MESSAGE);
                 }
-            } while (docTypeStr.length() != 1);
+                if(!docTypeStr.equals("C")){
+                    if(!docTypeStr.equals("T")){
+                    JOptionPane.showMessageDialog(this, "Error debe introducir entre las opciones(Tarjeta de identidad (T) o Cedula (C))","entrada invalida",JOptionPane.ERROR_MESSAGE);
+                    verificacionDocumento=false; }
+                } 
+            } while (verificacionDocumento==false);
             docType = docTypeStr.charAt(0);
-
             String numDoc;
             do {
                 numDoc = JOptionPane.showInputDialog("Escribe el numero del documento");
